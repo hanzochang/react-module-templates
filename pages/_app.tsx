@@ -4,10 +4,11 @@ import GoogleTagManager, {
   GoogleTagManagerId,
 } from '../partials/GoogleTagManager'
 import { googleTagManagerId } from '../utils/gtm'
+import { theme } from '../utils/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme.templateTheme}>
       <GoogleTagManager
         googleTagManagerId={googleTagManagerId as GoogleTagManagerId}
       />
